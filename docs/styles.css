@@ -16,8 +16,8 @@
 }
 
 body{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     background-image: url(assets/fondo.PNG);  
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -302,4 +302,77 @@ span{
     
     z-index: 10;
     
+}
+
+.arrowMenu__left{
+    
+    height: 60px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    background-color: #be0c0c96;
+    z-index: 10;
+    color: #131212;
+    font-size: 24px;
+    
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Suaviza el efecto */
+    transition: transform 0.5s ease;
+    
+}
+/* Clase para girar 180 grados */
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease; /* Suaviza el giro */
+  }
+.arrowMenu__left:hover{
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    background-color: #be0c0c;
+    cursor: pointer;
+}
+.arrowMenu{
+    height: 100%;
+    width: 40px;
+    position: fixed;
+    top: 0%;
+    box-sizing: border-box;
+    right: 0%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Para evitar contenido que se desborde */
+    transition: width 0.5s ease; /* Suaviza el cambio de tamaño */
+    background-color: #0a69f8;
+    z-index: 10;
+    color: #131212;
+    font-size: 24px;
+        
+}
+
+
+.menuLateral__arrow{
+    filter: invert(1); /* Invierte los colores */
+  
+}
+.contendedor__Menu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0af82a;
+    z-index: 10;
+    color: #131212;
+    font-size: 24px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Suaviza el efecto */
 }
