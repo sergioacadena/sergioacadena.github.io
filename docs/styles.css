@@ -15,12 +15,53 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
-    padding: 0;
-    background-image: url(assets/fondo.PNG);  
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--azulOscuro), var(--azulClaro)); /* Fondo base suave */
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+    color: var(--blanco);
+}
+
+/* Ondas suaves horizontales */
+@keyframes wave-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 25%, rgba(0, 0, 0, 0.05) 75%);
+    background-size: 100% 100%;
+    animation: wave-animation 10s linear infinite;
+    z-index: -1;
+    opacity: 0.2; /* Sutileza del fondo */
+}
+
+/* Onda más tenue con menor opacidad */
+body::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 30%, rgba(0, 0, 0, 0.03) 70%);
+    background-size: 100% 100%;
+    animation: wave-animation 12s linear infinite reverse;
+    z-index: -2;
+    opacity: 0.1; /* Más sutil que la primera onda */
 }
 .contenedor{
     /* border: 1px solid #ffffff; */
@@ -73,6 +114,7 @@ input[type="text"]:focus {/* elimina el borde cuando hago clic en el imput */
     color: var(--naranjaOscuro);
     font-size: 16px;
     margin-left: auto;
+    cursor: pointer;
 }
 .articuloInicio{
     /* border: 1px solid #e7ece4; */
@@ -304,6 +346,21 @@ span{
     
 }
 
+.contenedor__MenuLateral{
+    position: fixed; /* Fijo en la pantalla */
+    right: 0; /* Pegado al borde izquierdo */
+    top: 0; /* Opcional: Pegado al borde superior */
+    height: 100%; /* Ocupa toda la altura */
+    display: inline-flex; /* Se ajusta al tamaño de los hijos */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+    
+    box-sizing: border-box; /* Incluye padding y bordes en el cálculo del tamaño */
+    
+}
 .arrowMenu__left{
     
     height: 60px;
@@ -313,17 +370,19 @@ span{
     justify-content: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    position: absolute;
+    margin: 0;
     top: 50%;
     right: 20%;
-    background-color: #be0c0c96;
+    background-color: #2d0cbe96;
     z-index: 10;
     color: #131212;
     font-size: 24px;
     
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Suaviza el efecto */
-    transition: transform 0.5s ease;
     
+}
+.menuLateral__arrow{
+    filter: invert(1); /* Invierte los colores */
+    transition: transform 0.5s ease;
 }
 /* Clase para girar 180 grados */
 .rotate-180 {
@@ -336,43 +395,21 @@ span{
     background-color: #be0c0c;
     cursor: pointer;
 }
-.arrowMenu{
+.menuLateral{
     height: 100%;
-    width: 40px;
-    position: fixed;
-    top: 0%;
+    width: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     box-sizing: border-box;
-    right: 0%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     overflow: hidden; /* Para evitar contenido que se desborde */
-    transition: width 0.5s ease; /* Suaviza el cambio de tamaño */
     background-color: #0a69f8;
     z-index: 10;
     color: #131212;
     font-size: 24px;
+    transition: width 0.6s ease; /* Suaviza el cambio de tamaño */
         
 }
 
 
-.menuLateral__arrow{
-    filter: invert(1); /* Invierte los colores */
-  
-}
-.contendedor__Menu{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #0af82a;
-    z-index: 10;
-    color: #131212;
-    font-size: 24px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Suaviza el efecto */
-}
+
+

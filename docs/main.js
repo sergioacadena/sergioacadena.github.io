@@ -1,21 +1,21 @@
-document.getElementById("arrowMenuleft").addEventListener("click", function () {
-    const menu = document.getElementById("arrowMenu");
-  
+ function mostrarMenuLateral () {
+    const menu = document.getElementById("menuLateral");
+    
     // Alternar el ancho entre 0 y 200px (o el ancho que desees)
-    if (menu.style.width === "40px" || menu.style.width === "") {
-      menu.style.width = "200px"; // Ancho al expandirse
+    if (menu.style.width === "0px" || menu.style.width === "") {
+      menu.style.width = "280px"; // Ancho al expandirse
     } else {
-      menu.style.width = "40px"; // Vuelve al ancho original
+      menu.style.width = "0px"; // Vuelve al ancho original
     }
 
+    const menuArrow = document.getElementById("menuLateralArrow");
+    menuArrow.classList.toggle("rotate-180");
     
-  });
+  };
 
-  const menuArrow = document.getElementById("menuLateralArrow");
+document.getElementById("arrowMenuleft").addEventListener("click", mostrarMenuLateral);
+document.getElementById("iconoMenuHamburguesa").addEventListener("click", mostrarMenuLateral);
 
-// Añadimos un evento click al elemento
-menuArrow.addEventListener("click", function () {
-  // Alternamos la clase 'rotate-180' con cada clic
-  menuArrow.classList.toggle("rotate-180");
-});
+  
+
   
