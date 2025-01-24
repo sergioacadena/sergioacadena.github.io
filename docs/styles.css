@@ -8,60 +8,28 @@
     --naranjaClaro:#F27F3D;
     --naranjaOscuro:#F26444;
     --gris:#a4a4a5;
-    --blanco:#ffffff;
     --negro:#1d1d1d;
+    --grisClaro: #f5f5f5;
+    --grisMedio: #c3c3c4d8;
+    --grisOscuro: #504f4fb4;
+    --blanco: #ffffff;
 }
 *{
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(135deg, var(--azulOscuro), var(--azulClaro)); /* Fondo base suave */
-    overflow: hidden;
-    position: relative;
-    font-family: Arial, sans-serif;
-    color: var(--blanco);
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
 }
 
-/* Ondas suaves horizontales */
-@keyframes wave-animation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 25%, rgba(0, 0, 0, 0.05) 75%);
-    background-size: 100% 100%;
-    animation: wave-animation 10s linear infinite;
-    z-index: -1;
-    opacity: 0.2; /* Sutileza del fondo */
-}
-
-/* Onda más tenue con menor opacidad */
-body::after {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 30%, rgba(0, 0, 0, 0.03) 70%);
-    background-size: 100% 100%;
-    animation: wave-animation 12s linear infinite reverse;
-    z-index: -2;
-    opacity: 0.1; /* Más sutil que la primera onda */
+#gradient
+{
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
 }
 .contenedor{
     /* border: 1px solid #ffffff; */
@@ -97,7 +65,7 @@ body::after {
     justify-content: center;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px ;
-    box-shadow: 1px 1px 2px #d1501d;
+    
 }
 input[type="text"]:focus {/* elimina el borde cuando hago clic en el imput */
     outline: none;
@@ -111,7 +79,7 @@ input[type="text"]:focus {/* elimina el borde cuando hago clic en el imput */
     
 }
 .iconoMenu{
-    color: var(--naranjaOscuro);
+    color: var(--grisOscuro);
     font-size: 16px;
     margin-left: auto;
     cursor: pointer;
@@ -163,11 +131,12 @@ input[type="text"]:focus {/* elimina el borde cuando hago clic en el imput */
  
 }
 .aside__boton:hover{
-    height: 112%;
-    width: 112%;
+    height: 104%;
+    width: 104%;
+
     margin-left: -6px;
     margin-top: -6px;
-    box-shadow: 2px 2px 2px #c53205d8;
+    box-shadow: 2px 0px 1px #3a363538;
     z-index: 10;
 
 }
@@ -181,7 +150,7 @@ span{
     
 }
 .aside__boton:active{
-    box-shadow: 2px 2px 2px #f54242e7; 
+    box-shadow: 2px 2px 2px #534e4ee7; 
     height: 110%;
     width: 110%;
     margin-left: -4px;
@@ -265,9 +234,8 @@ span{
     margin-top: 28px;
     
     
-      background: linear-gradient(to right, #ff6600,#f1a26d, #ff0000); /* Definir el degradado */
       -webkit-background-clip: text; /* Hacer que el degradado se aplique al texto */
-      color: transparent; /* Hacer el texto transparente para que el degradado sea visible */
+      color: var(--azulClaro)
 }
 .numeroAboutus{
     background-color: transparent;
@@ -392,7 +360,7 @@ span{
 .arrowMenu__left:hover{
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    background-color: #be0c0c;
+    background-color: #0c18be;
     cursor: pointer;
 }
 .menuLateral{
@@ -402,7 +370,7 @@ span{
     border-bottom-left-radius: 10px;
     box-sizing: border-box;
     overflow: hidden; /* Para evitar contenido que se desborde */
-    background-color: #0a69f8;
+    background-color: #2c7aee6e;
     z-index: 10;
     color: #131212;
     font-size: 24px;
