@@ -20,8 +20,7 @@ document.getElementById("iconoMenuHamburguesa").addEventListener("click", mostra
 document.addEventListener("DOMContentLoaded", () => {
   const asideBtn = document.getElementById("asideBtn2");
   const popup = document.getElementById("popup-110diascss");
-  const cerrarPopupBtn = document.getElementById("btn-cerrar-popup");
-
+  
   if (asideBtn && popup) {
       asideBtn.addEventListener("click", () => {
           popup.style.height = "100%";
@@ -46,6 +45,39 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
       console.warn("Elemento no encontrado en el DOM");
   }
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const asideBtn = document.getElementById("asideBtn3");
+  const popup = document.getElementById("popup-componentes");
+  
+  if (asideBtn && popup) {
+      asideBtn.addEventListener("click", () => {
+          popup.style.height = "100%";
+          popup.style.width = "100%";
+          popup.style.display="flex";
+      });
+  } else {
+      console.warn("Elemento no encontrado en el DOM");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cerrarPopupBtn = document.getElementById("btn2-cerrar-popup");
+  const popup = document.getElementById("popup-componentes");
+
+  if (cerrarPopupBtn && popup) {
+    cerrarPopupBtn.addEventListener("click", () => {
+          popup.style.height = "0";
+          popup.style.width = "0";
+          popup.style.display="none";
+      });
+  } else {
+      console.warn("Elemento no encontrado en el DOM");
+  }
+
 });
 
 

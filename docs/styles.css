@@ -227,7 +227,7 @@ span{
     flex-direction: row;
     justify-content: center;
     color: #f4f5f8;
-    width: 90%;
+    width: 100%;
     background-color: #056444b2;
     border-radius: 14px;
     font-family: "Oswald", sans-serif;
@@ -250,23 +250,21 @@ span{
     
 }
 .container--popup-110diascss{
-    width: 90%;
-    height: 76%;
+    width: 90%;/* Opcional: garantiza que al menos ocupe toda la altura visible */
+    height: auto; /* Se ajusta automáticamente al contenido */
+    overflow-y: auto;
+    
     background-color: #b8b9bb85;
     margin: auto;
     border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
 }
 
 
-.container--popup-110diascss--proyecto{
+.container--popup-110diascss--proyecto, .container--componentes--proyecto{
     width: 100%;
-    height: 100%;
-    background-color: #c7c2c262; 
+    height: auto;
+    background-color: #c7c2c2d2; 
     margin: auto;
     padding: 4px;
     border-radius: 12px;
@@ -278,19 +276,23 @@ span{
     overflow-y: auto;
     border-radius: 4px;
 }
-.container--popup-110diascss--proyecto iframe{
+.container--componentes--proyecto {
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+.container--popup-110diascss--proyecto iframe, .container--componentes--proyecto iframe{
     width: 100%;
     height: 400px;
-    display: inline-block;
-    margin-right: 10px;
+    
     background-color: rgba(215, 231, 236, 0.349);
     border-radius: 14px;
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    line-height: 280px;
-    font-size: 20px;
+
+    
 }
 .textoNumero{
     font-size: 24px;
