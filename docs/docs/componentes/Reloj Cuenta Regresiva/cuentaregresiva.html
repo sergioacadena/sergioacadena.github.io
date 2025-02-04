@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva y Calendario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgba(240, 240, 240, 0.8);
+        }
+        #contador {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(to right, rgba(0, 102, 204, 0.7), rgba(0, 153, 51, 0.7));
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #numeros {
+            display: flex;
+            align-items: flex-end;
+        }
+        .bloque {
+            text-align: center;
+            margin: 0 5px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid white;
+            color: white;
+        }
+        .bloque span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .bloque small {
+            display: block;
+            font-size: 10px;
+            color: white;
+        }
+        .textos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .textos h1 {
+            margin: 0;
+            font-size: 16px;
+            color: white;
+        }
+        .textos p {
+            font-size: 12px;
+            margin: 2px 0;
+            color: white;
+        }
+        #calendario {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #calendario h2 {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(0, 102, 204, 1);
+        }
+        #dias {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+        .dia {
+            margin: 2px;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            text-align: center;
+            color: white;
+            background-color: green;
+        }
+        .pasado {
+            background-color: rgba(255, 0, 128, 0.7);
+        }
+        #boton-reporte {
+            padding: 5px 10px;
+            background: rgba(0, 153, 51, 0.9);
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        #boton-reporte:hover {
+            background-color: rgba(0, 102, 204, 1);
+            box-shadow: 0 0 10px rgba(0, 153, 51, 0.8), 0 0 20px rgba(0, 102, 204, 0.8);
+        }
+        #boton-reporte small {
+            display: block;
+            font-size: 8px;
+            margin-top: 3px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .parpadea {
+            animation: parpadeo 1s infinite;
+        }
+        @keyframes parpadeo {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="contador">
+    <div class="textos">
+        <h1>Cierre de Plataforma</h1>
+        <p id="fecha-cierre">La fecha de cierre es el 15 de noviembre a las 6:00 PM</p>
+    </div>
+    <div id="numeros">
+        <div class="bloque">
+            <span id="dias-faltantes">00</span>
+            <small>Días</small>
+        </div>
+        <div class="bloque">
+            <span id="horas-faltantes">00</span>
+            <small>Horas</small>
+        </div>
+        <div class="bloque">
+            <span id="minutos-faltantes">00</span>
+            <small>Minutos</small>
+        </div>
+        <div class="bloque">
+            <span id="segundos-faltantes">00</span>
+            <small>Segundos</small>
+        </div>
+    </div>
+    <div id="calendario">
+        <h2>Noviembre</h2>
+        <div id="dias"></div>
+    </div>
+    <a href="https://aulavirtual.unicab.org/grade/report/overview/index.php" id="boton-reporte" target="_blank">
+        VER NOTAS
+        <small>ver reporte anual de notas</small>
+    </a>
+</div>
+
+<script>
+    const fechaCierre = new Date('2024-11-15T18:00:00');
+    
+    function actualizarContador() {
+        const ahora = new Date();
+        const diferencia = fechaCierre - ahora;
+        
+        
+
+        const segundos = Math.floor(diferencia / 1000);
+        const minutos = Math.floor(segundos / 60);
+        const horas = Math.floor(minutos / 60);
+        const dias = Math.floor(horas / 24);
+
+        const horasFaltantes = horas % 24;
+        const minutosFaltantes = minutos % 60;
+        const segundosFaltantes = segundos % 60;
+
+        const elementos = {
+            dias: document.getElementById('dias-faltantes'),
+            horas: document.getElementById('horas-faltantes'),
+            minutos: document.getElementById('minutos-faltantes'),
+            segundos: document.getElementById('segundos-faltantes')
+        };
+
+        elementos.dias.innerText = String(dias).padStart(2, '0');
+        elementos.horas.innerText = String(horasFaltantes).padStart(2, '0');
+        elementos.minutos.innerText = String(minutosFaltantes).padStart(2, '0');
+        elementos.segundos.innerText = String(segundosFaltantes).padStart(2, '0');
+
+        for (let unidad in elementos) {
+            if (elementos[unidad].innerText === '00') {
+                elementos[unidad].classList.add('parpadea');
+            } else {
+                elementos[unidad].classList.remove('parpadea');
+            }
+        }
+
+        actualizarCalendario(dias);
+    }
+
+    function actualizarCalendario(diasRestantes) {
+        const diasDiv = document.getElementById('dias');
+        diasDiv.innerHTML = '';
+
+        const fechaActual = new Date().getDate();
+        const diasTotales = 40;
+
+        for (let i = 1; i <= diasTotales; i++) {
+            const diaDiv = document.createElement('div');
+            diaDiv.classList.add('dia');
+            diaDiv.innerText = i;
+
+            if (i < fechaActual) {
+                diaDiv.classList.add('pasado');
+            }
+
+            diasDiv.appendChild(diaDiv);
+        }
+    }
+
+    const intervalo = setInterval(actualizarContador, 1000);
+    actualizarContador();
+</script>
+
+</body>
+</html>
