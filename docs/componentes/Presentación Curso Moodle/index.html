@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="foto">
+            <img src="assets/foto.PNG" alt="">
+        </div>
+        <button class="boton__informacion" id="boton__informacion">
+            <h4>Información</h4>
+            <img class="arrow" id="arrow" src="assets/arrow.svg" alt="">
+        </button>
+        <div class="informacion" id="informacion">
+            <div class="datos data__nombre">
+                <h2 class="text">NOMBRE PROFESOR</h2>
+            </div>
+            <div class="datos data__texto">
+                HORARIO DE ATENCIÓN
+            </div>
+            <div class="datos data__dias">
+                LUNES A VIERNES
+            </div>
+            <div class="datos data__horas">
+                <h3>8:00a.m. <sup><u>a</u></sup> 12:00m. y 2:00p.m. <sup><u>a</u></sup> 6:00p.m.</h3>
+            </div>
+            <div class="datos data__correo">
+                <a  id="text-mail" class="text-mail" >ergio.cadena@unicab.org</a>
+                <span class="material-symbols-outlined data__iconoEnviar" id="data__iconoEnviar" onclick="copyText(event)">forward_to_inbox <h5>Enviar</h5></span>
+            </div>
+            <div class="datos data__telefono">
+                
+                <a  target="_blank" class="text-phone" id="text-phone">
+                    3012063213
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi9JREFUSEvN1UnITnEUBvDfx8JMdoREiChThg1JmVI2hqIUiTInZcGGYiE2xpQSxUKxUJJZSCFiY0ghsjKkKGS+R+f7ent77/vafPWd1e3e8z/P/zznOc9t0srR1Mr1tQmAsViAyRiCX7iFO7iAB/VYqNdBPxzGDHzOQk/wDaMxEj2wG1vwvRZQGUDc9Bo6YAOO40+NAmsT4AXm4VF1Ti2AXriXVEzF8wZCGFF0dAbtMBxfKvNrAZzDeIzDy4KmPuiGp3WAAuQ+jmBlPYBJuIFlmTwsu3mHASU0NdfbjB2YjkvNL6s72Iel6FkM7kfR7ibszOQY9sU6XXRKMQRdc8sAHuI15mTCKhzI5wA+2mAecT5iVBnAm4L/mMGKTOidc/iIkO3PBgCHsAjdywCe5bAWVhQKKe7FQaxpMIegcz06lgGcT/4nVN30ZG5z8BuAnZOuUM2pomh0GBF5YzC4DGB7DrYv3laAtC+A92A1PvHPw0K6EbvyTOzBe5zG8jKAgblY24qErTX4npZ0Dc1vvzEzZRncn0hraVFbrUULJYShhcmVRdAQg3yVIuiPuwivmlJ5qBqgS/IZ+7CxgWKaP0fxywkY2x8yb4lqgNk4W9C0GNF+bOXtYouP4WsVYMxpCdalssK3Gprd/hxkc604MCit+HrSEa4aXjUxk27m9tc0xeoOwkMi8SquFJL8UNhx1+Jm84sfzCyEfMNGHqdnhUSD+9JoE7/M/5x17bRW7+Av0jpxGTt6Zt0AAAAASUVORK5CYII="/>
+                </a>
+                
+            </div>
+        </div>
+         
+        <div class="contenedor__citas" id="contenedor__citas">
+            <div class="cita__text">Progamar Tutoría</div> 
+            <span class="material-symbols-outlined icon__Calendar" >
+                calendar_month
+                </span> 
+            <div class="boton_calendar">
+            <!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2uqrMxONYEyWMVXj8NHLx7odXopNwsaGRiuuxLxzk1N6IipNyQKhTRn3p8VAmxB0l66mkaTndl?gv=true',
+      color: '#039BE0',
+      label: 'Reserva',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
+            </div> 
+            <div class="instrucciones_citas" id="botonInstrucciones" >
+                <h3>Instrucciones</h3>
+                <div>
+                    <h3>Solo funciona si tu dispositivo tiene la zona horaria de Colombia y dentro de los horarios de atención</h3>
+                    
+                </div>
+            </div>
+
+            
+         
+        </div>
+       
+    </div>
+
+   
+
+    <div id="mi-modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal material-symbols-outlined" onclick="cerrarModal()">cancel</span>
+            
+            <p>DIRECCIÓN DE CORREO ELECTRÓNICO COPIADA <br><span id="textMailModal">
+            </span><br>
+                 Cerrar ventana para enviar e-mail
+                </p>
+        </div>
+    </div>
+
+    <div id="mi-modal-intrucciones" class="modal">
+        
+        <div class="modal-contenido modal-contenido__instrucciones">
+            <span class="cerrar-modal material-symbols-outlined" onclick="cerrarModalInstrucciones()">cancel</span>
+            <h2>INSTRUCIONES</h2>
+           
+            <div class="intemInstruccion">Duración: 
+                <p>La tutoría es de máximo 15 minutos</p>
+            </div>
+            <div class="intemInstruccion">Anticipación Mínima:
+                <p>Solo se puede agendar 24 horas antes</p>
+            </div>
+            <div class="intemInstruccion">Anticipación Máxima
+                <p>No se puede agendar con un tiempo mayor a 8 días </p>
+            </div>
+            <div class="intemInstruccion">Google Calendar
+                <p>Revisa la aplicación Google Calendar para ver la información de la cita</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
