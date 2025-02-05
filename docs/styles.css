@@ -230,7 +230,7 @@ span{
     justify-content: center;
     color: #f4f5f8;
     width: 100%;
-    background-color: #056444b2;
+    background-color: #056444f6;
     border-radius: 14px;
     font-family: "Oswald", sans-serif;
 }
@@ -515,12 +515,20 @@ span{
   }
   .slider{
     margin: 0;
+    pad: 0;
     background-color: transparent;
     border: none;
+    height: 68%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
   }
-  .slider{
-    background-color: transparent;
+  h4{
+    margin: 0;
+    margin-left: 14%;
   }
+  
   .aside{
     margin: 0;
   }
@@ -550,9 +558,37 @@ span{
   }
   .iconoMenu{
     display: none;
-
-  }
     
+  }
+  .container--popup-110diascss--proyecto, .container--componentes--proyecto{
+    width: 100%;
+    height: auto;
+    background-color: #c7c2c2d2; 
+    margin: auto;
+    padding: 4px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: auto;
+    border-radius: 4px;
+}
+    
+.cerrar-popup{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: none;
+    margin: 8%;
+    background-color:transparent;
+    color: #0ff507;
+    position: absolute;
+    top:0;
+    right: -8px;
+    
+}
   }
 
 
