@@ -26,17 +26,6 @@ body {
 
 
 
-.form-group {
-    margin-bottom: 1rem;
-}
 
 
 
-
-
-
-@media (max-width: 768px) {
-    .row {
-        grid-template-columns: 1fr;
-    }
-}

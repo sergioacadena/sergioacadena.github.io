@@ -125,13 +125,14 @@ input[type="text"]:focus {/* elimina el borde cuando hago clic en el imput */
 }
 .aside__boton{
  background-color: #277FF2;
- height: 102%;
- width: 102%;
+ height: 99%;
+ width: 99%;
  padding: 0%;
  border: none;
  cursor: pointer;
  font-family: "Oswald", sans-serif;
  color: #ffffffb7;
+ margin:2px;
  margin-top: 0px;
  border-radius: 4px;
  transition: 300ms;
@@ -296,7 +297,7 @@ span{
     
 }
 .textoNumero{
-    font-size: 24px;
+    font-size: 1rem;
     display: flex;
     align-items: flex-start;
     flex-direction: column-reverse;
@@ -494,6 +495,65 @@ span{
     transition: width 0.6s ease; /* Suaviza el cambio de tamaño */
         
 }
+@media screen and (max-width: 768px) {
+    html{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+ body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+ }
+  .contenedor{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    gap: 0;
+    padding: 0;
+  }
+  .slider{
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
+  .slider{
+    background-color: transparent;
+  }
+  .aside{
+    margin: 0;
+  }
+
+  .aside__boton{
+    height: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    
+  }
+  .aside__boton:active{
+    width: 100%;
+  }
+  .aside__boton h2{
+    
+    margin: 10%;
+    padding: 0;
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-align: left;
+  }
+  .arrowMenu__left{
+    display: none;
+  }
+  .iconoMenu{
+    display: none;
+
+  }
+    
+  }
 
 
 

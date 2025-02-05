@@ -226,3 +226,11 @@ flex-direction: column;
     border-top: 1px solid #f8f7f4;
     box-sizing: content-box;
 }
+@media screen and (max-width: 768px) {
+ body{
+    background-color: transparent;
+ }
+ .container{
+    background-color: transparent;
+ };
+}
