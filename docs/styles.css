@@ -25,6 +25,7 @@ html, body {
     overflow: hidden; /* Oculta el scroll */
     display: flex;
     flex-direction: column;
+    background-color: #f5f26a;
 }
 body { 
     position: relative;
