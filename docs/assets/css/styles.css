@@ -196,6 +196,33 @@ a:focus-visible {
   position: relative;
   z-index: 2;
 }
+/* Retrato personal integrado en la composición animada */
+.hero-portrait-frame {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: clamp(180px, 23vw, 280px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--lime);
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--bg);
+  box-shadow:
+    0 0 0 6px rgba(183, 255, 0, 0.08),
+    0 0 28px rgba(183, 255, 0, 0.18);
+}
+
+.hero-portrait-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 50%;
+}
+
 
 .eyebrow {
   display: inline-flex;
@@ -1008,7 +1035,10 @@ a:focus-visible {
   .hero-visual {
     width: 100%;
   }
-
+  
+  .hero-portrait-frame {
+    width: clamp(170px, 55vw, 230px);
+  }
   .navigation {
     gap: 18px;
   }
@@ -1207,5 +1237,75 @@ a:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Trayectoria profesional */
+.journey-section {
+  position: relative;
+}
+
+.journey-list {
+  display: grid;
+  gap: 0;
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.journey-item {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.7fr) 2fr;
+  gap: 32px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.journey-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.journey-meta span:last-child {
+  color: var(--lime);
+}
+
+.journey-content h3 {
+  margin: 0 0 8px;
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+}
+
+.journey-organization {
+  margin: 0 0 14px;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.journey-content p:last-child {
+  max-width: 680px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+@media (max-width: 680px) {
+  .journey-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 25px 0;
+  }
+
+  .journey-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 18px;
   }
 }
