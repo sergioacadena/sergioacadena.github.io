@@ -3,79 +3,415 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10131c">
-  <title>Portafolio | Sergio Andrés Cadena Bautista</title>
-  <meta name="description" content="Portafolio profesional de Sergio Andrés Cadena Bautista: EdTech, Moodle, diseño instruccional, STEAM y desarrollo frontend.">
-  <style>
-    :root {
-      color-scheme: dark;
-      font-family: system-ui, sans-serif;
-      background: #10131c;
-      color: #f4f5fa;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10151f">
+  <meta
+    name="description"
+    content="Portafolio profesional de Sergio Andrés Cadena Bautista: Learning Technology, Moodle, diseño instruccional, STEAM y desarrollo frontend."
+  >
 
-    * { box-sizing: border-box; }
+  <title>Sergio Cadena | Learning Technology & Digital Experiences</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      background:
-        radial-gradient(ellipse at 80% 20%, #263b5c 0, transparent 45%),
-        #10131c;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
-    main {
-      width: min(720px, 100%);
-      padding: clamp(24px, 6vw, 56px);
-      border: 1px solid #39445a;
-      border-radius: 24px;
-      background: rgb(20 25 38 / 88%);
-      box-shadow: 0 24px 80px #0005;
-    }
-
-    .tag {
-      color: #83e5cf;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-size: .8rem;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 6vw, 3.8rem);
-      line-height: 1.08;
-      letter-spacing: -.045em;
-    }
-
-    p {
-      color: #c2cad9;
-      line-height: 1.8;
-    }
-
-    .status {
-      display: inline-block;
-      padding: 8px 12px;
-      border: 1px solid #426e67;
-      border-radius: 999px;
-      color: #a6f0dd;
-      font-size: .85rem;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
+
 <body>
-  <main>
-    <span class="tag">EdTech · Learning Technology · Frontend</span>
-    <h1>Sergio Andrés Cadena Bautista</h1>
-    <p>
-      Magíster en Ambientes Educativos Mediados por TIC,
-      profesional de la tecnología educativa y administrador Moodle,
-      con experiencia en innovación pedagógica y desarrollo de
-      soluciones digitales.
-    </p>
-    <span class="status">● Portafolio en construcción</span>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#inicio" aria-label="Sergio Cadena, inicio">
+        <span class="brand-mark">SC<span>.</span></span>
+        <span class="brand-caption">DIGITAL PORTFOLIO</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="primary-navigation" aria-label="Navegación principal">
+        <a href="#perfil">Perfil</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto" class="nav-contact">Hablemos <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            <span>EDUCATION × TECHNOLOGY × DESIGN</span>
+          </div>
+
+          <h1>
+            Conecto la tecnología
+            <span class="headline-muted">con el</span>
+            <span class="headline-accent">aprendizaje.</span>
+          </h1>
+
+          <p class="hero-description">
+            Soy profesional en informática y tecnología educativa.
+            Diseño experiencias de aprendizaje, administro plataformas
+            digitales y desarrollo soluciones que conectan pedagogía
+            e innovación.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#proyectos">
+              Explorar proyectos <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-secondary" href="#perfil">
+              Conocer mi perfil <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="hero-footnote">
+            <span class="footnote-line"></span>
+            <span>Learning Technology · EdTech · Frontend</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Representación visual de mis áreas de trabajo">
+          <div class="visual-topline">
+            <span>FIELD NOTES / 001</span>
+            <span>EDITION 2026</span>
+          </div>
+
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+
+          <div class="visual-core">
+            <span class="core-symbol">&lt;/&gt;</span>
+            <span class="core-label">HUMAN-CENTERED<br>TECHNOLOGY</span>
+          </div>
+
+          <div class="orbit-node node-top">
+            <span class="node-icon">01</span>
+            <span>LEARNING</span>
+          </div>
+
+          <div class="orbit-node node-right">
+            <span class="node-icon node-lime">02</span>
+            <span>BUILDING</span>
+          </div>
+
+          <div class="orbit-node node-bottom">
+            <span class="node-icon">03</span>
+            <span>DESIGNING</span>
+          </div>
+
+          <div class="visual-coordinate coordinate-one">5°32'N</div>
+          <div class="visual-coordinate coordinate-two">73°22'W</div>
+
+          <div class="visual-bottomline">
+            <span>IDEAS → EXPERIENCES</span>
+            <span class="visual-cross">✳</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-index">
+        <span>01 / INTRODUCCIÓN</span>
+        <span>SCB — PORTAFOLIO PROFESIONAL</span>
+        <a href="#perfil">DESCUBRIR MÁS ↓</a>
+      </div>
+    </section>
+
+    <section class="profile-section section-shell" id="perfil">
+      <div class="container profile-grid">
+        <div class="section-label">
+          <span class="eyebrow">02 / PERFIL</span>
+          <span class="label-decoration"></span>
+        </div>
+
+        <div class="profile-content">
+          <h2>
+            Tecnología con criterio.
+            <span>Educación con intención.</span>
+          </h2>
+
+          <p>
+            Mi trabajo se sitúa en la intersección entre tecnología,
+            diseño de experiencias de aprendizaje e innovación educativa.
+            Combino mi experiencia en educación virtual, administración
+            de Moodle, diseño instruccional y proyectos STEAM con el
+            desarrollo de soluciones digitales.
+          </p>
+
+          <p>
+            Me interesa convertir necesidades educativas reales en
+            experiencias digitales útiles, accesibles y bien diseñadas.
+          </p>
+
+          <div class="profile-tags">
+            <span>Learning Technology</span>
+            <span>Diseño instruccional</span>
+            <span>STEAM & Robótica</span>
+            <span>Desarrollo frontend</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specialties-section section-shell" id="especialidades">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">03 / ÁREAS DE TRABAJO</span>
+            <h2>Donde las ideas<br>se convierten en <span>soluciones.</span></h2>
+          </div>
+          <p>
+            Experiencia pedagógica y técnica aplicada a plataformas,
+            experiencias de aprendizaje y productos digitales.
+          </p>
+        </div>
+
+        <div class="specialty-grid">
+          <article class="specialty-card">
+            <div class="card-topline">
+              <span>01 — PLATFORMS</span>
+              <span class="card-arrow">↗</span>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">▤</div>
+            <h3>Learning Technology</h3>
+            <p>
+              Administración de Moodle, gestión de cursos, usuarios,
+              roles, permisos y acompañamiento técnico-pedagógico.
+            </p>
+            <div class="card-tags">
+              <span>Moodle</span>
+              <span>LMS</span>
+              <span>E-learning</span>
+            </div>
+          </article>
+
+          <article class="specialty-card specialty-card-featured">
+            <div class="card-topline">
+              <span>02 — EXPERIENCE</span>
+              <span class="card-arrow">↗</span>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">✳</div>
+            <h3>Diseño instruccional</h3>
+            <p>
+              Diseño de cursos virtuales, estrategias de gamificación
+              y secuencias didácticas vinculadas con la Taxonomía de Bloom.
+            </p>
+            <div class="card-tags">
+              <span>Gamificación</span>
+              <span>Bloom</span>
+              <span>UX educativa</span>
+            </div>
+          </article>
+
+          <article class="specialty-card">
+            <div class="card-topline">
+              <span>03 — INNOVATION</span>
+              <span class="card-arrow">↗</span>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">⌘</div>
+            <h3>STEAM & Robótica</h3>
+            <p>
+              Integración curricular de programación, robótica educativa,
+              pensamiento computacional y aprendizaje basado en proyectos.
+            </p>
+            <div class="card-tags">
+              <span>Arduino</span>
+              <span>micro:bit</span>
+              <span>ABP</span>
+            </div>
+          </article>
+
+          <article class="specialty-card">
+            <div class="card-topline">
+              <span>04 — DEVELOPMENT</span>
+              <span class="card-arrow">↗</span>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Desarrollo digital</h3>
+            <p>
+              Interfaces web, componentes con JavaScript y experiencias
+              interactivas que conectan diseño, funcionalidad y contenido.
+            </p>
+            <div class="card-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section section-shell" id="proyectos">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">04 / SELECCIÓN DE TRABAJO</span>
+            <h2>Proyectos con <span>propósito.</span></h2>
+          </div>
+          <p>
+            Experiencias y desarrollos que muestran cómo aplico la
+            tecnología en contextos educativos.
+          </p>
+        </div>
+
+        <div class="project-filters" aria-label="Filtrar proyectos">
+          <button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter-button" type="button" data-filter="learning" aria-pressed="false">Learning Tech</button>
+          <button class="filter-button" type="button" data-filter="diseno" aria-pressed="false">Diseño instruccional</button>
+          <button class="filter-button" type="button" data-filter="steam" aria-pressed="false">STEAM</button>
+          <button class="filter-button" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-category="diseno">
+            <div class="project-art project-art-bloom">
+              <span class="project-art-label">INSTRUCTIONAL DESIGN / 01</span>
+              <div class="bloom-graphic" aria-hidden="true">
+                <span>CREATE</span>
+                <span>EVALUATE</span>
+                <span>ANALYZE</span>
+                <span>APPLY</span>
+              </div>
+              <span class="project-art-footer">LEARN BY LEVELS ↗</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>DISEÑO INSTRUCCIONAL</span><span>01</span></div>
+              <h3>Curso virtual gamificado</h3>
+              <p>
+                Diseño de una secuencia didáctica gamificada con progresión
+                por niveles y desbloqueo automatizado de actividades
+                asociado a la Taxonomía de Bloom.
+              </p>
+              <span class="project-link-label">Gamificación · Moodle · Bloom</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="learning">
+            <div class="project-art project-art-lms">
+              <span class="project-art-label">LEARNING TECHNOLOGY / 02</span>
+              <div class="lms-window" aria-hidden="true">
+                <div class="lms-sidebar"><i></i><i></i><i></i><i></i></div>
+                <div class="lms-content">
+                  <div class="lms-bar"></div>
+                  <div class="lms-blocks"><i></i><i></i><i></i></div>
+                  <div class="lms-lines"></div>
+                </div>
+              </div>
+              <span class="project-art-footer">LEARNING SYSTEMS ↗</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>PLATAFORMAS EDUCATIVAS</span><span>02</span></div>
+              <h3>Administración y soporte Moodle</h3>
+              <p>
+                Gestión de cursos, usuarios, roles, permisos y
+                acompañamiento técnico-pedagógico en entornos virtuales
+                de aprendizaje.
+              </p>
+              <span class="project-link-label">Moodle · LMS · E-learning</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="steam">
+            <div class="project-art project-art-steam">
+              <span class="project-art-label">STEAM EDUCATION / 03</span>
+              <div class="steam-graphic" aria-hidden="true">
+                <span class="steam-node">S</span>
+                <span class="steam-node">T</span>
+                <span class="steam-node">E</span>
+                <span class="steam-node">A</span>
+                <span class="steam-node">M</span>
+              </div>
+              <span class="project-art-footer">LEARN BY MAKING ↗</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>INNOVACIÓN EDUCATIVA</span><span>03</span></div>
+              <h3>Integración curricular STEAM</h3>
+              <p>
+                Experiencia de integración curricular y metodológica con
+                programación, robótica, pensamiento computacional y
+                aprendizaje basado en proyectos.
+              </p>
+              <span class="project-link-label">Robótica · Programación · ABP</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="frontend">
+            <div class="project-art project-art-code">
+              <span class="project-art-label">FRONTEND DEVELOPMENT / 04</span>
+              <div class="code-graphic" aria-hidden="true">
+                <span><b>01</b> const experience = {</span>
+                <span><b>02</b> &nbsp; learning: true,</span>
+                <span><b>03</b> &nbsp; technology: true,</span>
+                <span><b>04</b> &nbsp; impact: "real"</span>
+                <span><b>05</b> };</span>
+              </div>
+              <span class="project-art-footer">DESIGN × CODE ↗</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>DESARROLLO WEB</span><span>04</span></div>
+              <h3>Interfaces y soluciones digitales</h3>
+              <p>
+                Desarrollo de interfaces educativas y soluciones digitales
+                que combinan JavaScript, diseño de interacción y
+                necesidades concretas de los usuarios.
+              </p>
+              <span class="project-link-label">HTML · CSS · JavaScript</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-note">
+          Esta primera selección presenta áreas de trabajo. En la siguiente
+          iteración vincularemos los proyectos con evidencias, publicaciones,
+          repositorios y documentos disponibles.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section section-shell" id="contacto">
+      <div class="container contact-panel">
+        <span class="eyebrow">05 / CONECTEMOS</span>
+        <h2>Las buenas ideas<br>merecen <span>hacerse realidad.</span></h2>
+        <p>
+          Estoy interesado en oportunidades donde la tecnología,
+          el aprendizaje y la innovación puedan generar valor.
+        </p>
+        <a class="button button-primary" href="mailto:TU_CORREO@EJEMPLO.COM">
+          Hablemos por correo <span aria-hidden="true">↗</span>
+        </a>
+        <span class="contact-note">LEARNING · BUILDING · SHARING</span>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark">SC<span>.</span></span>
+      </a>
+      <span>Diseñado con intención. Construido con código.</span>
+      <span>© <span id="current-year">2026</span> Sergio Cadena</span>
+    </div>
+  </footer>
 </body>
 </html>
