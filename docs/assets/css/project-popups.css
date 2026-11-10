@@ -1,0 +1,160 @@
+
+/* =========================================
+   PROJECT POP-UPS
+   Ventana modal y animaciones
+========================================= */
+
+.project-dialog {
+  width: min(900px, calc(100% - 32px));
+  max-width: 900px;
+  max-height: 88vh;
+  padding: 0;
+  overflow: visible;
+  color: #f4f6fa;
+  background: #10151f;
+  border: 1px solid rgba(183, 255, 0, 0.3);
+  border-radius: 18px;
+}
+
+.project-dialog[open] {
+  animation: project-dialog-enter 0.35s ease both;
+}
+
+.project-dialog::backdrop {
+  background: rgba(3, 6, 12, 0.82);
+  backdrop-filter: blur(7px);
+  animation: project-backdrop-enter 0.3s ease both;
+}
+
+.project-dialog-shell {
+  position: relative;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: clamp(28px, 5vw, 55px);
+}
+
+.project-dialog-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  margin: -12px -12px 10px 15px;
+  color: #f4f6fa;
+  background: #202938;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  font-size: 27px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-dialog-close:hover {
+  color: #10151f;
+  background: #b7ff00;
+}
+
+.project-dialog-content {
+  clear: both;
+}
+
+.project-detail {
+  padding-top: 12px;
+}
+
+.project-detail-eyebrow {
+  color: #b7ff00;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.project-detail h2 {
+  margin: 18px 0;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.15;
+}
+
+.project-detail p {
+  max-width: 680px;
+  color: #aab4c3;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@keyframes project-dialog-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes project-backdrop-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-dialog[open],
+  .project-dialog::backdrop {
+    animation: none;
+  }
+}
+/* Tarjetas que funcionan como botones */
+.project-card-clickable {
+  cursor: pointer;
+}
+
+.project-card-clickable:focus-visible {
+  outline: 2px solid #b7ff00;
+  outline-offset: 5px;
+}
+
+/* Interacción táctil y accesibilidad móvil */
+.project-card-clickable {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.project-card-clickable:focus-visible {
+  outline: 2px solid #b7ff00;
+  outline-offset: 5px;
+}
+
+@media (max-width: 768px) {
+  .project-dialog {
+    width: calc(100% - 24px);
+    max-width: none;
+    max-height: 90dvh;
+    margin: auto;
+  }
+
+  .project-dialog-shell {
+    max-height: 90dvh;
+    padding: 28px 22px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .project-dialog-close {
+    position: sticky;
+    top: 0;
+    width: 42px;
+    height: 42px;
+  }
+}
