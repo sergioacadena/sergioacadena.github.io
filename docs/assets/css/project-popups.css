@@ -158,3 +158,11 @@
     height: 42px;
   }
 }
+.gam-publication .gam-authors {
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid var(--gam-line);
+  color: var(--gam-cyan);
+  font-size: 11px;
+  line-height: 1.8;
+}
